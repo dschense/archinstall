@@ -3,3 +3,7 @@ htop #monitoring
 net-tools #ifconfig and utils
 networkmanager #for network funktion
 git #to interact with git projects
+virtualbox-guest-utils #just for virtualbox
+xf86-video-vmware #virtualbox video driver
+openssh #openssh service
+nano #editor
