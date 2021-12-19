@@ -1,3 +1,4 @@
+opendoas #replacing sudo
 htop #monitoring
 net-tools #ifconfig and utils
 networkmanager #for network funktion
