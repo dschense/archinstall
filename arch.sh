@@ -160,7 +160,7 @@ useradd -m -G wheel -s /bin/bash $username
 passwd $username
 
 # Install packetmanager YAY
-runuser -l $username -c 'cd && mkdir Git && cd Git && git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si && yay -S --noconfirm librewolf-bin librewolf-extension-dark-reader librewolf-extension-localcdn librewolf-extension-plasma-integration librewolf-extension-return-youtube-dislike-git librewolf-ublock-origin opendoas-sudo'
+runuser -l $username -c 'cd && mkdir Git && cd Git && git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si && yay -S --noconfirm opendoas-sudo'
 
 # unmount installed filesystem
 exit
