@@ -57,6 +57,10 @@ if [[ $answer = y ]] ; then
   echo "Target EFI partition: "
   read efipartition
   mkfs.vfat -F 32 $efipartition
+else
+  echo "Target Legacy Boot partition: "
+  read legacyboot
+  mkfs.ext4 $legacyboot
 fi
 
 read -p "Did you make a swap partition? [y/n] " answer
@@ -66,7 +70,9 @@ if [[ $answer = y ]] ; then
   swapon $swappartition
 fi
 
-mount $partition /mnt 
+mount $partition /mnt
+mkdir /mnt/boot
+mount $legacyboot /mnt/boot
 pacstrap /mnt base base-devel linux-zen linux-zen-headers
 genfstab -U /mnt >> /mnt/etc/fstab
 
