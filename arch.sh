@@ -144,9 +144,8 @@ sed -i 's/GRUB_TIMEOUT=5/GRUB_TIMEOUT=0/g' /etc/default/grub
 grub-mkconfig -o /boot/grub/grub.cfg
 
 # Install packages
-pacman -S --noconfirm xorg-server sddm plasma akregator ark audiocd-kio dolphin dolphin-plugins elisa ffmpegthumbs filelight gwenview k3b kaddressbook kate kcalc kcharselect kcolorchooser kdeconnect kdegraphics-thumbnailers kdenetwork-filesharing kdenlive kdialog kio-extras kleopatra kmail konsole konversation krdc krfb krita ktorrent markdownpart okular partitionmanager spectacle svgpart yakuake
-pacman -R pulseaudio
-pacman -S mpv pipewire-pulse zsh rsync pavucontrol-qt opendoas
+curl -LO "" -o /tmp/packages.txt
+sed -e "/^#/d" -e "s/#.*//" /tmp/packages.txt | pacman -S --needed -
 
 # Enable NetworkManager
 systemctl enable NetworkManager.service

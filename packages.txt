@@ -1,0 +1,3 @@
+htop
+net-tools
+neofetch #just a test
