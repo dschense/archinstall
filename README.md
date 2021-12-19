@@ -1,0 +1,2 @@
+# archinstall
+Installscript Archlinux
