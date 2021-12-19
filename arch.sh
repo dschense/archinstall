@@ -160,7 +160,7 @@ useradd -m -G wheel -s /bin/bash $username
 passwd $username
 
 # Install packetmanager YAY
-runuser -l $username -c 'cd && mkdir Git && cd Git && git clone https://aur.archlinux.org/paru.git && cd paru && makepkg -si && paru -S --noconfirm opendoas-sudo'
+# runuser -l $username -c 'cd && mkdir Git && cd Git && git clone https://aur.archlinux.org/paru.git && cd paru && makepkg -si && paru -S --noconfirm opendoas-sudo'
 
 echo "
 ----------------------------------------------------------------------------------
