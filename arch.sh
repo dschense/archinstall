@@ -144,8 +144,8 @@ sed -i 's/GRUB_TIMEOUT=5/GRUB_TIMEOUT=0/g' /etc/default/grub
 grub-mkconfig -o /boot/grub/grub.cfg
 
 # Install packages
-curl -Lo packages.txt https://bit.ly/3GVT7sj
-sed -e 's/#.*$//;/^$/d' /tmp/packages.txt | pacman -S --needed -
+curl -Lo /tmp/packages.txt https://bit.ly/3GVT7sj
+pacman -S $(awk '{print $1}'  /tmp/packages.txt)
 rm /tmp/packages.txt
 
 # Enable NetworkManager
