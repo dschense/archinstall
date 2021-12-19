@@ -16,6 +16,7 @@ echo "
 
 dschense's Arch Installer Script modifyed from
 (C) 2021 Gianmarco Gargiulo - GPL v3
+https://git.gianmarco.ga/gianmarco/gais
 
 WARNING: this script is experimental.
 Use at your own risk!
@@ -169,4 +170,5 @@ echo "
 
 Installation completed! You may now reboot into your freshly installed Arch Linux.
 (C) 2021 Gianmarco Gargiulo - GPL v3 - www.gianmarco.ga
+https://git.gianmarco.ga/gianmarco/gais
 "
