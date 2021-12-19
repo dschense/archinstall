@@ -1,3 +1,4 @@
-htop
-net-tools
-networkmanager #just a test
+htop #monitoring
+net-tools #ifconfig and utils
+networkmanager #for network funktion
+git #to interact with git projects
