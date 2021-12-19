@@ -25,9 +25,9 @@ Use at your own risk!
 
 # Main installation
 echo "Starting the main installation..."
-reflector --latest 20 --sort rate --country Italy --save /etc/pacman.d/mirrorlist --protocol http --download-timeout 5
+reflector --latest 20 --sort rate --country Germany --save /etc/pacman.d/mirrorlist --protocol http --download-timeout 5
 sed -i "s/^#ParallelDownloads = 5$/ParallelDownloads = 15/" /etc/pacman.conf
-loadkeys it
+loadkeys de
 timedatectl set-ntp true
 
 lsblk
@@ -83,13 +83,13 @@ pacman -Sy
 pacman -S --noconfirm sed
 sed -i "s/^#ParallelDownloads = 5$/ParallelDownloads = 15/" /etc/pacman.conf
 
-ln -sf /usr/share/zoneinfo/Europe/Rome /etc/localtime
+ln -sf /usr/share/zoneinfo/Europe/Berlin /etc/localtime
 hwclock --systohc
 
-echo "it_IT.UTF-8 UTF-8" >> /etc/locale.gen
+echo "de_DE.UTF-8 UTF-8" >> /etc/locale.gen
 locale-gen
-echo "LANG=it_IT.UTF-8" > /etc/locale.conf
-echo "KEYMAP=it" > /etc/vconsole.conf
+echo "LANG=de_DE.UTF-8" > /etc/locale.conf
+echo "KEYMAP=de" > /etc/vconsole.conf
 
 echo "Type a hostname for your system: "
 read hostname
