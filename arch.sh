@@ -163,6 +163,7 @@ passwd $username
 runuser -l $username -c 'cd && mkdir Git && cd Git && git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si && yay -S --noconfirm librewolf-bin librewolf-extension-dark-reader librewolf-extension-localcdn librewolf-extension-plasma-integration librewolf-extension-return-youtube-dislike-git librewolf-ublock-origin opendoas-sudo'
 
 # unmount installed filesystem
+exit
 umount -R /mnt
 
 echo "
