@@ -156,7 +156,7 @@ echo "permit persist keepenv :wheel as root" > /etc/doas.conf
 echo "Create your own user account. It will have administrative privileges (wheel)."
 echo "Username: "
 read username
-useradd -m -G wheel -s /bin/zsh $username
+useradd -m -G wheel -s /bin/bash $username
 passwd $username
 
 # Install packetmanager YAY
