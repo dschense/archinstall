@@ -38,10 +38,9 @@ For a UEFI system:
     Part. 2 = root (where the actual system will be installed)
     Part. 3 = swap (optional), min 512M
 For a traditional BIOS / MBR system:
-    Part. 1 = BIOS Boot, 1M
-    Part. 2 = EFI, 256MB
-    Part. 3 = root (where the actual system will be installed)
-    Part. 4 = swap (optional), min 512M
+    Part. 1 = BIOS Boot, 512M
+    Part. 2 = root (where the actual system will be installed)
+    Part. 3 = swap (optional), min 512M
 For more information go RTFM at wiki.archlinux.org.
 Type drives/partitions as full paths (e.g. '/dev/sda' or '/dev/sda1').
 Target drive: "
