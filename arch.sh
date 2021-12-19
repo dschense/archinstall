@@ -162,10 +162,6 @@ passwd $username
 # Install packetmanager YAY
 runuser -l $username -c 'cd && mkdir Git && cd Git && git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si && yay -S --noconfirm opendoas-sudo'
 
-# unmount installed filesystem
-exit
-umount -R /mnt
-
 echo "
 ----------------------------------------------------------------------------------
 
