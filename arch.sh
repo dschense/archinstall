@@ -145,8 +145,8 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 # Install packages
 curl -Lo packages.txt https://bit.ly/3GVT7sj
-sed -e "/^#/d" -e "s/#.*//" packages.txt | pacman -S --needed -
-rm packages.txt
+sed -e 's/#.*$//;/^$/d' /tmp/packages.txt | pacman -S --needed -
+rm /tmp/packages.txt
 
 # Enable NetworkManager
 systemctl enable NetworkManager.service
