@@ -34,7 +34,8 @@ timedatectl set-ntp true
 
 # Partitioning with cfdisk
 lsblk
-echo "You'll be asked for where to install your OS. Use cfdisk to partition the drive.
+echo "
+You'll be asked for where to install your OS. Use cfdisk to partition the drive.
 These are some reccommended partition schemes.
 For a UEFI system:
     Part. 1 = EFI, min 300M
@@ -143,10 +144,13 @@ fi
 sed -i 's/GRUB_TIMEOUT=5/GRUB_TIMEOUT=0/g' /etc/default/grub
 grub-mkconfig -o /boot/grub/grub.cfg
 
-# Install packages
-curl -Lo /tmp/packages.txt https://bit.ly/3GVT7sj
-pacman -S $(awk '{print $1}'  /tmp/packages.txt)
-rm /tmp/packages.txt
+# Install packages from file
+#curl -Lo /tmp/packages.txt https://bit.ly/3GVT7sj
+#pacman -S $(awk '{print $1}'  /tmp/packages.txt)
+#rm /tmp/packages.txt
+
+# Install needed packages
+pacman -S --noconfirm opendoas networkmanager nano vim git net-tools htop openssh
 
 # Enable NetworkManager
 systemctl enable NetworkManager.service
