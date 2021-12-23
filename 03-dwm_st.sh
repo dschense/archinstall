@@ -6,7 +6,7 @@ git clone https://git.suckless.org/dwm #dwm window manager
 git clone https://git.suckless.org/st # terminal
 
 # install needed software
-doas pacman -Sy xorg-server xorg-xinit libx11 libxinerama libxft webkit2gt
+doas pacman -Sy xorg-server xorg-xinit libx11 libxinerama libxft webkit2gtk
 
 # exec dwm .xinitrc
 cd ~/
