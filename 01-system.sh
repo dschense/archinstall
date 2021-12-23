@@ -124,7 +124,7 @@ mkinitcpio -P
 # Set root PW
 echo "You will now be asked to input a password for the root user."
 passwd
-pacman --noconfirm -S grub efibootmgr os-prober
+pacman --noconfirm -S grub
 
 # Setup GRUB
 read -p "Did you make an EFI partition for UEFI? [y/n] " answer
@@ -134,6 +134,7 @@ echo "Enter EFI partition: "
 read efipartition
 mkdir /boot/efi
 mount $efipartition /boot/efi
+pacman --noconfirm -S efibootmgr os-prober
 grub-install --target=x86_64-efi --bootloader-id=grub_uefi --recheck
 else
 lsblk
