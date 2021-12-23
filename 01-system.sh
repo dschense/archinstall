@@ -84,12 +84,12 @@ mkdir /mnt/boot
 mount $legacyboot /mnt/boot
 
 # Install Base System
-pacstrap /mnt base base-devel linux-zen linux-zen-headers
+pacstrap /mnt base base-devel linux linux-headers linux-firmware
 genfstab -U /mnt >> /mnt/etc/fstab
 
-sed '1,/^# Configuration$/d' arch.sh > /mnt/arch_part2.sh
-chmod +x /mnt/arch_part2.sh
-arch-chroot /mnt ./arch_part2.sh
+sed '1,/^# Configuration$/d' 01-system.sh > /mnt/01-system_part2.sh
+chmod +x /mnt/01-system_part2.sh
+arch-chroot /mnt ./01-system_part2.sh
 exit
 
 

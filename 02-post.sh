@@ -1,5 +1,5 @@
 #!/bin/bash
-#postinstall
+#postinstall - change sudo to doas / install paru-bin package
 
 #manual link doas to sudo
 doas mv /usr/bin/sudo /usr/bin/sudo.BAK
